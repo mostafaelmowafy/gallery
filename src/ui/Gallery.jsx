@@ -7,11 +7,7 @@ function Gallery() {
           Gallary
         </p>
         <div className="">
-          <img
-            src="../../public/assets/board.png"
-            alt="Gallary"
-            className="  "
-          />
+          <img src="/assets/board.png" alt="Gallary" className="  " />
         </div>
       </div>
       <div className=" mt-24 grid grid-cols-3 md:grid-cols-5 gap-4 p-4 w-full max-w-6xl">
