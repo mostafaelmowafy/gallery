@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className=" bg-slate-800 text-slate-100 font-semibold px-4 py-2 flex justify-between items-center">
       <span className="">Mo3az&apos;s Gallery</span>
-      <ul className="flex space-x-4 cursor-pointer">
+      <navigator className="flex space-x-4 cursor-pointer">
         <Link
           to={"/contact"}
           className=" hover:text-sky-500 active:text-sky-500 marker:transition-colors duration-300 cursor-pointer"
@@ -12,7 +12,7 @@ function Header() {
           Contact
         </Link>
         <Link
-          to={"/gallary"}
+          to={"/gallery"}
           className=" hover:text-sky-500 active:text-sky-500 marker:transition-colors duration-300 cursor-pointer"
         >
           Gallery
@@ -23,7 +23,7 @@ function Header() {
         >
           Home
         </Link>
-      </ul>
+      </navigator>
     </header>
   );
 }

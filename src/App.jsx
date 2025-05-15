@@ -5,34 +5,31 @@ import Error from "./ui/Error";
 import Gallery from "./ui/Gallery";
 import Contact from "./ui/Contact";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <Applayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: "/",
+          element: <MainPage />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/gallery",
+          element: <Gallery />,
+        },
+      ],
+    },
+  ],
   {
-    element: <Applayout />,
-    children: [
-      {
-        path: "/",
-        element: <MainPage />,
-        errorElement: <Error />,
-      },
-      {
-        path: "/gallary",
-        element: <Gallery />,
-        errorElement: <Error />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-        errorElement: <Error />,
-      },
-
-      {
-        path: "/gallery",
-        element: <h1>Gallery</h1>,
-        errorElement: <Error />,
-      },
-    ],
-  },
-]);
+    basename: "/",
+  }
+);
 
 function App() {
   return <RouterProvider router={router} />;
